@@ -12,12 +12,12 @@ import Settings from "./pages/Settings";
 import Users from "./pages/Users";
 
 //todo // this is component imports
-// import GlobalStyles from "./styles/GlobalStyles";
+import GlobalStyles from "./styles/GlobalStyles";
 
 const App = () => {
   return (
     <>
-      {/* <GlobalStyles /> */}
+      <GlobalStyles />
       <BrowserRouter>
         <Routes>
           <Route index element={<Navigate replace to="dashboard" />} />
