@@ -1,4 +1,4 @@
-import { createGlobalStyles } from "styled-components";
+import createGlobalStyles from "styled-components";
 
 //todo // this is the global css styles
 
@@ -186,7 +186,7 @@ FOR DARK MODE
 --image-opacity: 90%;
 
 
-    
+    */
 `;
 
 export default GlobalStyles;
