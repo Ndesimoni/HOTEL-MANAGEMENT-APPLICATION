@@ -1,13 +1,17 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-
+import { IoHomeOutline } from "react-icons/io5";
+import { IoCalendarOutline } from "react-icons/io5";
+import { BiCabinet } from "react-icons/bi";
+import { LiaUsersCogSolid } from "react-icons/lia";
+import { IoSettingsOutline } from "react-icons/io5";
 const NavList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 `;
 
-const StyledLink = styled(NavLink)`
+const StyledNavLink = styled(NavLink)`
   &:link,
   &:visited {
     display: flex;
@@ -50,25 +54,29 @@ const MainNav = () => {
   return (
     <nav>
       <NavList>
-        <StyledLink>
-          <NavLink to="/">Home</NavLink>
-        </StyledLink>
+        <StyledNavLink to="/">
+          <IoHomeOutline /> <span>Home</span>
+        </StyledNavLink>
 
-        <StyledLink>
-          <NavLink to="/cabins">Cabins</NavLink>
-        </StyledLink>
+        <StyledNavLink to="/bookings">
+          <IoCalendarOutline />
+          <span>Bookings</span>
+        </StyledNavLink>
 
-        <StyledLink>
-          <NavLink to="/account">account</NavLink>
-        </StyledLink>
+        <StyledNavLink to="/cabins">
+          <BiCabinet />
+          <span>Cabins</span>
+        </StyledNavLink>
 
-        <StyledLink>
-          <NavLink to="/users">Users</NavLink>
-        </StyledLink>
+        <StyledNavLink to="/users">
+          <LiaUsersCogSolid />
+          <span>Users</span>
+        </StyledNavLink>
 
-        <StyledLink>
-          <NavLink to="/settings">Settings</NavLink>
-        </StyledLink>
+        <StyledNavLink to="/settings">
+          <IoSettingsOutline />
+          <span>settings</span>
+        </StyledNavLink>
       </NavList>
     </nav>
   );
