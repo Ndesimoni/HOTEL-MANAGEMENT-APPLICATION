@@ -7,7 +7,7 @@ const NavList = styled.ul`
   gap: 0.8rem;
 `;
 
-const Link = styled(NavLink)`
+const StyledLink = styled(NavLink)`
   &:link,
   &:visited {
     display: flex;
@@ -50,12 +50,25 @@ const MainNav = () => {
   return (
     <nav>
       <NavList>
-        <Link>
+        <StyledLink>
           <NavLink to="/">Home</NavLink>
-        </Link>
-        <Link>
-          <NavLink to="/">Home</NavLink>
-        </Link>
+        </StyledLink>
+
+        <StyledLink>
+          <NavLink to="/cabins">Cabins</NavLink>
+        </StyledLink>
+
+        <StyledLink>
+          <NavLink to="/account">account</NavLink>
+        </StyledLink>
+
+        <StyledLink>
+          <NavLink to="/users">Users</NavLink>
+        </StyledLink>
+
+        <StyledLink>
+          <NavLink to="/settings">Settings</NavLink>
+        </StyledLink>
       </NavList>
     </nav>
   );
