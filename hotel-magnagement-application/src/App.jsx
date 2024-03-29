@@ -13,6 +13,7 @@ import Users from "./pages/Users";
 
 //todo // this is component imports
 import GlobalStyles from "./styles/GlobalStyles";
+import AppLayOut from "./ui/AppLayOut";
 
 const App = () => {
   return (
@@ -20,15 +21,21 @@ const App = () => {
       <GlobalStyles />
       <BrowserRouter>
         <Routes>
-          <Route index element={<Navigate replace to="dashboard" />} />
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="bookings" element={<Bookings />} />
-          <Route path="cabins" element={<Cabins />} />
-          <Route path="account" element={<Account />} />
-          <Route path="login" element={<Login />} />
-          <Route path="settings" element={<Settings />} />
-          <Route path="user" element={<Users />} />
-          <Route path="*" element={<PageNotFound />} />
+          <Route
+            element={
+              <AppLayOut>
+                <Route index element={<Navigate replace to="dashboard" />} />
+                <Route path="dashboard" element={<Dashboard />} />
+                <Route path="bookings" element={<Bookings />} />
+                <Route path="cabins" element={<Cabins />} />
+                <Route path="account" element={<Account />} />
+                <Route path="login" element={<Login />} />
+                <Route path="settings" element={<Settings />} />
+                <Route path="user" element={<Users />} />
+                <Route path="*" element={<PageNotFound />} />
+              </AppLayOut>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </>
