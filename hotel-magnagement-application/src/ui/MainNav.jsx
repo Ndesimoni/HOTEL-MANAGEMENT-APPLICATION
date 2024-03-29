@@ -1,5 +1,7 @@
 // import styled from "styled-components";
 
+import Dashboard from "../pages/Dashboard";
+
 // const NavList = styled.ul`
 //   display: flex;
 //   flex-direction: column;
@@ -46,7 +48,11 @@
 // `;
 
 const MainNav = () => {
-  return <div>tis i the mai</div>;
+  return (
+    <div>
+      <Dashboard />
+    </div>
+  );
 };
 
 export default MainNav;

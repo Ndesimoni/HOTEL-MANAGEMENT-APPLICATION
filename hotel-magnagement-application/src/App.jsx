@@ -21,21 +21,17 @@ const App = () => {
       <GlobalStyles />
       <BrowserRouter>
         <Routes>
-          <Route
-            element={
-              <AppLayOut>
-                <Route index element={<Navigate replace to="dashboard" />} />
-                <Route path="dashboard" element={<Dashboard />} />
-                <Route path="bookings" element={<Bookings />} />
-                <Route path="cabins" element={<Cabins />} />
-                <Route path="account" element={<Account />} />
-                <Route path="login" element={<Login />} />
-                <Route path="settings" element={<Settings />} />
-                <Route path="user" element={<Users />} />
-                <Route path="*" element={<PageNotFound />} />
-              </AppLayOut>
-            }
-          />
+          <Route element={<AppLayOut />}>
+            <Route index element={<Navigate replace to="dashboard" />} />
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="bookings" element={<Bookings />} />
+            <Route path="cabins" element={<Cabins />} />
+            <Route path="account" element={<Account />} />
+            <Route path="login" element={<Login />} />
+            <Route path="settings" element={<Settings />} />
+          </Route>
+          <Route path="*" element={<PageNotFound />} />
+          <Route path="user" element={<Users />} />
         </Routes>
       </BrowserRouter>
     </>
