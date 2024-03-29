@@ -6,21 +6,20 @@ const Heading = styled.h1`
   ${(props) =>
     props.as === "h1" &&
     css`
-      background-color: yellow;
+      background-color: ;
     `}
 
   ${(props) =>
     props.as === "h2" &&
     css`
-      background-color: green;
+      background-color: ;
     `}
 
     ${(props) =>
     props.as === "h3" &&
     css`
-      background-color: pink;
+      background-color: ;
     `}
-
 
   font-size: 30px;
   font-weight: 600;
