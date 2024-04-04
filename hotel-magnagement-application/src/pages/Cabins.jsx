@@ -1,15 +1,12 @@
 import { useEffect } from "react";
 import Heading from "../ui/Heading";
 import Row from "../ui/Row";
-import supabase from "../services/supabase";
+import getCabinApi from "../services/apiCabins";
 
 function Cabins() {
   useEffect(() => {
-    async function apirequest() {
-      const response = supabase().then((data) => console.log(data));
-      return response;
-    }
-    apirequest();
+    const data = getCabinApi().catch((data) => console.log(data));
+    return data;
   }, []);
 
   return (
