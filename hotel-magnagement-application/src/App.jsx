@@ -13,13 +13,23 @@ import Users from "./pages/Users";
 
 //todo // this is component imports
 import GlobalStyles from "./styles/GlobalStyles";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+// import { ReactQueryDevtools } from "react-query-devtools";
 
 //todo // this is for ui components
 import AppLayOut from "./ui/AppLayOut";
 
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 60 * 1000,
+    },
+  },
+});
+
 const App = () => {
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <GlobalStyles />
       <BrowserRouter>
         <Routes>
@@ -38,7 +48,7 @@ const App = () => {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </QueryClientProvider>
   );
 };
 
